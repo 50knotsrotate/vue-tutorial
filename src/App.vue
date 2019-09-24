@@ -1,20 +1,24 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <Todos v-bind:todos="todos"/>
   </div>
 </template>
 
 <script>
+import Todos from './components/Todos'
 export default {
   name: "app",
-  components: {},
+  components: {
+    Todos
+  },
   data() {
     return {
       todos: [
         {
           id: 1,
           title: "Todo one",
-          completed: false
+          completed: true
         },
         {
           id: 2,
@@ -38,7 +42,7 @@ export default {
         },
         {
           id: 6,
-          title,'Drive home',
+          title:'Drive home',
           completed: false
         }
       ]
